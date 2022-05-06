@@ -1,10 +1,10 @@
 @echo off
-set version = v1.1
+set version=v1.2
 title 文件查找器 %version% Author: Jerry
 :start
 if exist %tmp%\查找结果.tmp del %tmp%\查找结果.tmp
 echo [注意事项] 如果路径错误或没有该后缀的文件将不会生成log文件
-echo [更新日志] 版本%version% 小修小补
+echo [更新日志] 版本%version% 修复了版本号不显示的问题
 echo.
 title 文件查找器
 set /p name=请输入想要查找文件后缀的文件夹路径（输入q来退出）：
