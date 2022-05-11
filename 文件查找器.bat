@@ -1,27 +1,27 @@
 @echo off
-set version=v1.4
-title ÎÄ¼þ²éÕÒÆ÷
+set version=v1.3
+title æ–‡ä»¶æŸ¥æ‰¾å™¨
 :start
-if exist %tmp%\²éÕÒ½á¹û.tmp del %tmp%\²éÕÒ½á¹û.tmp
-echo [×¢ÒâÊÂÏî] Èç¹ûÂ·¾¶´íÎó»òÃ»ÓÐ¸Ãºó×ºµÄÎÄ¼þ½«²»»áÉú³ÉlogÎÄ¼þ
-echo [¸üÐÂÈÕÖ¾] °æ±¾%version% ÏÖÔÚÉú³ÉlogÎÄ¼þºó»áÒ»²¢´ò¿ªlogÎÄ¼þ
+if exist %tmp%\æŸ¥æ‰¾ç»“æžœ.tmp del %tmp%\æŸ¥æ‰¾ç»“æžœ.tmp
+echo [æ³¨æ„äº‹é¡¹] å¦‚æžœè·¯å¾„é”™è¯¯æˆ–æ²¡æœ‰è¯¥åŽç¼€çš„æ–‡ä»¶å°†ä¸ä¼šç”Ÿæˆlogæ–‡ä»¶
+echo [æ›´æ–°æ—¥å¿—] ç‰ˆæœ¬%version% çŽ°åœ¨ç”Ÿæˆlogæ–‡ä»¶åŽä¼šä¸€å¹¶æ‰“å¼€logæ–‡ä»¶
 echo.
-title ÎÄ¼þ²éÕÒÆ÷
-set /p name=ÇëÊäÈëÏëÒª²éÕÒÎÄ¼þºó×ºµÄÎÄ¼þ¼ÐÂ·¾¶£¨ÊäÈëqÀ´ÍË³ö£©£º
+title æ–‡ä»¶æŸ¥æ‰¾å™¨
+set /p name=è¯·è¾“å…¥æƒ³è¦æŸ¥æ‰¾æ–‡ä»¶åŽç¼€çš„æ–‡ä»¶å¤¹è·¯å¾„ï¼ˆè¾“å…¥qæ¥é€€å‡ºï¼‰ï¼š
 if "%name%" == "" cls & goto start
 if %name% == q exit
 if %name% == Q exit
-set /p hou=ÇëÊäÈëÏëÒª²éÕÒµÄÎÄ¼þÀàÐÍ(ºó×º£¬Èçdoc¡¢pptµÈ)£º
-echo ÕýÔÚÑ°ÕÒÎÄ¼þ...
+set /p hou=è¯·è¾“å…¥æƒ³è¦æŸ¥æ‰¾çš„æ–‡ä»¶ç±»åž‹(åŽç¼€ï¼Œå¦‚docã€pptç­‰)ï¼š
+echo æ­£åœ¨å¯»æ‰¾æ–‡ä»¶...
 for /r %name%\ %%i in (*.%hou%) do (
-    echo %%i >> %tmp%\²éÕÒ½á¹û.tmp
-    echo ·¢ÏÖ%%i
+    echo %%i >> %tmp%\æŸ¥æ‰¾ç»“æžœ.tmp
+    echo å‘çŽ°%%i
 )
-echo ÕýÔÚÉú³ÉlogÎÄ¼þ...
-copy %tmp%\²éÕÒ½á¹û.tmp ²éÕÒ½á¹û.log >nul
-echo logÎÄ¼þÒÑÉú³É.
-if exist %tmp%\²éÕÒ½á¹û.tmp del %tmp%\²éÕÒ½á¹û.tmp
-start ²éÕÒ½á¹û.log
+echo æ­£åœ¨ç”Ÿæˆlogæ–‡ä»¶...
+copy %tmp%\æŸ¥æ‰¾ç»“æžœ.tmp æŸ¥æ‰¾ç»“æžœ.log >nul
+echo logæ–‡ä»¶å·²ç”Ÿæˆ.
+if exist %tmp%\æŸ¥æ‰¾ç»“æžœ.tmp del %tmp%\æŸ¥æ‰¾ç»“æžœ.tmp
+start æŸ¥æ‰¾ç»“æžœ.log
 pause >nul
 cls
 goto start
